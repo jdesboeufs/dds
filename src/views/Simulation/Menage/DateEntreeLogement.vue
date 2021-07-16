@@ -16,6 +16,7 @@
 <script>
 import Actions from "@/components/Actions"
 import InputDate from "@/components/InputDate"
+import moment from "moment"
 
 export default {
   name: "SimulationDateEntreeLogement",
@@ -27,8 +28,20 @@ export default {
     const menage = { ...(this.$store.getters.getMenage || {}) }
     return {
       menage: menage,
-      value: menage.date_entree_logement,
+      date: menage.date_entree_logement,
     }
+  },
+  computed: {
+    value: {
+      get() {
+        return this.date
+          ? moment(this.date, "YYYY-MM-DD", true).toDate()
+          : undefined
+      },
+      set: function (value) {
+        this.date = moment(value).format("YYYY-MM-DD")
+      },
+    },
   },
   methods: {
     onSubmit() {
@@ -36,8 +49,12 @@ export default {
         this.$store.dispatch("updateError", "Ce champ est obligatoire.")
         return
       }
-      this.menage.date_entree_logement = this.value
+      this.menage.date_entree_logement = this.date
       this.$store.dispatch("updateMenage", this.menage)
+      const date = this.menage.date_entree_logement
+      // eslint-disable-next-line no-debugger
+      debugger
+
       this.$push()
     },
   },

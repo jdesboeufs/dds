@@ -22,7 +22,6 @@ let DATE_FIELDS = [
   "date_arret_de_travail",
   "date_debut_chomage",
   "plus_haut_diplome_date_obtention",
-  "date_entree_logement",
   "contrat_de_travail_debut",
 ]
 
