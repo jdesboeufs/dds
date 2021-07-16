@@ -1,10 +1,10 @@
-label: Aide au logement « Mon job mon logement »
+label: aide au logement « Mon job mon logement »
 institution: action_logement
-description: L’aide au logement « Mon job mon logement » s’adresse aux actifs en 1er emploi, en alternance, en reprise d’emploi suite à une situation de chômage pour les accompagner dans l’installation de leur logement.
+description: L’aide au logement « Mon job mon logement » s’adresse aux actifs en emploi, en alternance, en reprise d’emploi suite à une situation de chômage pour les accompagner dans l’installation de leur logement.
 link: https://www.actionlogement.fr/aide-mon-job-mon-logement
 teleservice: https://piv.actionlogement.fr/simulateur-mobilite
 prefix: l'
-floorAt: 1
 type: float
+floorAt: 1
 legend: ""
-entity: individu
+entity: individus
