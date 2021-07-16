@@ -51,9 +51,6 @@ export default {
       }
       this.menage.date_entree_logement = this.date
       this.$store.dispatch("updateMenage", this.menage)
-      const date = this.menage.date_entree_logement
-      // eslint-disable-next-line no-debugger
-      debugger
 
       this.$push()
     },
