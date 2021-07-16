@@ -41,6 +41,11 @@ function individuBlockFactory(id) {
                 r("alternant"),
               ],
             },
+            {
+              isActive: (subject) =>
+                subject.activite === "actif" || subject.alternant,
+              steps: [r("contrat_de_travail_debut")],
+            },
           ]
         : []),
       ...(!enfant
